@@ -43,6 +43,7 @@ export default function ProjectModal({ project, onClose }) {
           </div>
 
           <p className="modal-panel__body">{project?.description ?? ''}</p>
+          {project?.contribution ? <p className="modal-panel__body"><strong>My contribution:</strong> {project.contribution}</p> : null}
           <div className="project-modal-image-wrap">
             <img
               className="project-modal-image"
@@ -54,8 +55,11 @@ export default function ProjectModal({ project, onClose }) {
           <div className="modal-panel__actions">
             {project?.url ? (
               <a className="btn-modal-primary" href={project.url} target="_blank" rel="noreferrer">
-                Open Project
+                {project.kind === 'Web application' ? 'Visit Live App' : 'View Figma Design'}
               </a>
+            ) : null}
+            {project?.sourceUrl ? (
+              <a className="btn-secondary" href={project.sourceUrl} target="_blank" rel="noopener noreferrer">View Source Code</a>
             ) : null}
             <span className="modal-panel__hint">
               {project && !project.url ? 'Project link not added yet.' : ''}

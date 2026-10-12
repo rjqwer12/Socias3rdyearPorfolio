@@ -5,10 +5,14 @@ export default function ContactSection() {
     <section className="section section--contact" id="contact">
       <div className="page-shell">
         <div className="contact-inner">
-          <h2 className="contact-inner__title">Let&apos;s Connect</h2>
+          <p className="section-label">03 / Get in touch</p>
+          <h2 className="contact-inner__title">Let&apos;s start<br />a conversation.</h2>
           <p className="contact-inner__lead">
-            Stay updated with my latest academic projects and professional journey.
+            Have a project, internship opportunity, or question? Get in touch.
           </p>
+          <a className="contact-email" href="mailto:rjmolenesepidasocias@gmail.com">
+            rjmolenesepidasocias@gmail.com
+          </a>
 
           <div className="social-row">
             {socialLinks.map(({ label, href, icon }) => (

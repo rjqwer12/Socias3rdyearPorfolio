@@ -7,14 +7,12 @@ import ContactSection from './components/ContactSection.jsx';
 import Footer from './components/Footer.jsx';
 import ProjectModal from './components/ProjectModal.jsx';
 import { getProjectBySlug } from './data/projects.js';
-import { useNavShadow } from './hooks/useNavShadow.js';
 import { useSmoothAnchorFallback } from './hooks/useSmoothAnchorFallback.js';
 
 export default function App() {
   const [activeSlug, setActiveSlug] = useState(null);
   const activeProject = activeSlug ? getProjectBySlug(activeSlug) : null;
 
-  useNavShadow();
   useSmoothAnchorFallback();
 
   const closeModal = useCallback(() => setActiveSlug(null), []);

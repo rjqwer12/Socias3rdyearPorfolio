@@ -16,9 +16,8 @@
 | `src/App.jsx` | Page shell: layout + modal state |
 | `src/components/` | UI sections (Navbar, HomeSection, Projects, …) |
 | `src/data/` | `projects.js`, `socialLinks.js` — edit copy and URLs here |
-| `src/hooks/` | Nav shadow + smooth-scroll fallback |
-| `src/styles/index.css` | Global styles (same design tokens as before) |
-| `legacy-static/` | Previous single-file HTML/CSS backup |
+| `src/hooks/` | Smooth-scroll fallback |
+| `src/styles/index.css` | Global styles |
 
 ## Deploy (e.g. Vercel)
 
